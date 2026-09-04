@@ -1,5 +1,5 @@
 /** @import must precede all other statements */
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
 
 @import "tailwindcss";
 
@@ -13,17 +13,17 @@
    * A different format will require also updating the theme in tailwind.config.ts.
   */
   :root {
-    --background: 216 33% 97%;
-    --foreground: 215 40% 14%;
+    --background: 160 20% 97%;
+    --foreground: 175 59% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 40% 14%;
+    --card-foreground: 222.2 84% 4.9%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 208 53% 16%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 175 59% 15%;
+    --primary-foreground: 78 96% 71%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -107,15 +107,10 @@
   body {
     @apply bg-background text-foreground;
     font-family: "DM Sans", sans-serif;
-    font-synthesis: none;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: "Manrope", sans-serif;
-  }
-
-  button, a {
-    font-family: "DM Sans", sans-serif;
+  .font-display {
+    font-family: "Space Grotesk", sans-serif;
   }
 
   :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
@@ -128,15 +123,4 @@
     overflow-x: auto;
     white-space: pre;
   }
-}
-
-@layer components {
-  .map-grid { background-image: linear-gradient(rgba(98, 136, 138, .09) 1px, transparent 1px), linear-gradient(90deg, rgba(98, 136, 138, .09) 1px, transparent 1px); background-size: 26px 26px; }
-  .road { position: absolute; height: 9px; border-radius: 999px; background: rgba(255,255,255,.8); box-shadow: 0 0 0 3px rgba(181,203,198,.35); }
-  .road-a { width: 120%; left: -8%; top: 47%; transform: rotate(-25deg); }
-  .road-b { width: 115%; left: -3%; top: 35%; transform: rotate(32deg); }
-  .road-c { width: 100%; left: 4%; top: 69%; transform: rotate(8deg); }
-  .road-d { width: 90%; left: 15%; top: 18%; transform: rotate(74deg); }
-  .road-e { width: 84%; left: 2%; top: 77%; transform: rotate(-58deg); }
-  .legend-dot { display: inline-block; width: 7px; height: 7px; border-radius: 999px; margin-right: 5px; }
 }
